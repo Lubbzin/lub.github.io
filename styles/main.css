@@ -1,0 +1,368 @@
+:root {
+    --rosa: #ff2a6d;
+    --carmesim: #d10047;
+    --preto: #1a1a1a;
+    --branco: #f5f5f5;
+    --sangue: #8a0303;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--preto);
+    color: var(--branco);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(209, 0, 71, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 42, 109, 0.1) 0%, transparent 20%);
+}
+
+.tela-cheia {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.titulo-sangrento {
+    font-family: 'Creepster', cursive;
+    font-size: 5rem;
+    color: var(--rosa);
+    text-shadow: 
+        0 0 10px var(--carmesim),
+        3px 3px 0 var(--sangue);
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    position: relative;
+    z-index: 2;
+}
+
+.titulo-sangrento .destaque {
+    color: var(--branco);
+    text-shadow: 
+        0 0 15px var(--rosa),
+        0 0 30px var(--carmesim),
+        3px 3px 0 var(--sangue);
+}
+
+.subtitulo {
+    font-size: 1.5rem;
+    color: var(--branco);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 5px rgba(255, 42, 109, 0.7);
+    max-width: 600px;
+}
+
+/* Botão destruído */
+.botao-destruido {
+    background: linear-gradient(145deg, var(--carmesim), #a00038);
+    color: var(--branco);
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: 'Creepster', cursive;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 
+        5px 5px 0 var(--sangue),
+        0 0 15px rgba(255, 42, 109, 0.5);
+    transition: all 0.3s;
+    transform: skew(-5deg);
+}
+
+.botao-destruido:hover {
+    background: linear-gradient(145deg, var(--rosa), var(--carmesim));
+    box-shadow: 
+        8px 8px 0 var(--sangue),
+        0 0 25px var(--rosa);
+    transform: skew(-5deg) translateY(-5px);
+}
+
+.botao-destruido::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s;
+}
+
+.botao-destruido:hover::before {
+    left: 100%;
+}
+
+/* Elementos de gatinho */
+.gatinho-pata {
+    position: absolute;
+    font-size: 3rem;
+    opacity: 0.7;
+    animation: flutuar 6s infinite ease-in-out;
+    filter: drop-shadow(0 0 5px var(--rosa));
+}
+
+/* Marcas de cigarro */
+.cigarro-marca {
+    position: fixed;
+    color: #888;
+    font-size: 1.5rem;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.cigarro-1 {
+    top: 20%;
+    left: 10%;
+    transform: rotate(20deg);
+}
+
+.cigarro-2 {
+    bottom: 30%;
+    right: 15%;
+    transform: rotate(-15deg);
+}
+
+.cigarro-3 {
+    top: 40%;
+    left: 80%;
+    transform: rotate(10deg);
+}
+
+/* Efeito de sangue */
+.sangue-efeito {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20,20 Q40,5 60,20 T100,20 Q85,40 100,60 T80,100 Q60,85 40,100 T20,80 Q5,60 20,40 Z' fill='%23d10047' fill-opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Seções */
+section {
+    min-height: 100vh;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.oculto {
+    display: none;
+}
+
+.titulo-cortado {
+    font-family: 'Creepster', cursive;
+    font-size: 3.5rem;
+    color: var(--preto);
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    position: relative;
+    text-shadow: 
+        3px 3px 0 var(--rosa),
+        -1px -1px 0 var(--carmesim);
+}
+
+.titulo-cortado span {
+    color: var(--branco);
+    text-shadow: 
+        2px 2px 0 var(--sangue),
+        0 0 10px var(--carmesim);
+}
+
+/* Timeline sangrenta */
+.timeline-sangrenta {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.timeline-sangrenta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--rosa), var(--sangue));
+    margin-left: -2px;
+    border-radius: 2px;
+}
+
+.momento {
+    background: rgba(26, 26, 26, 0.8);
+    border: 2px solid var(--carmesim);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    width: calc(50% - 40px);
+    box-shadow: 0 0 15px rgba(209, 0, 71, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.momento:nth-child(odd) {
+    left: 0;
+}
+
+.momento:nth-child(even) {
+    left: 50%;
+}
+
+.momento::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: var(--sangue);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--rosa);
+}
+
+.momento:nth-child(odd)::after {
+    right: -50px;
+}
+
+.momento:nth-child(even)::after {
+    left: -50px;
+}
+
+.data-momento {
+    color: var(--rosa);
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-family: 'Creepster', cursive;
+}
+
+.descricao-momento {
+    color: var(--branco);
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.imagem-momento {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid var(--carmesim);
+    box-shadow: 0 0 10px rgba(209, 0, 71, 0.5);
+}
+
+/* Galeria gore */
+.galeria-gore {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.item-galeria {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    aspect-ratio: 1/1;
+    border: 2px solid var(--carmesim);
+    box-shadow: 0 0 15px rgba(209, 0, 71, 0.3);
+}
+
+.item-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.item-galeria:hover img {
+    transform: scale(1.1);
+}
+
+.item-galeria::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 42, 109, 0.2), rgba(209, 0, 71, 0.4));
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.item-galeria:hover::before {
+    opacity: 1;
+}
+
+/* Caixa de surpresa */
+.caixa-sangue {
+    background: rgba(26, 26, 26, 0.9);
+    border: 3px solid var(--carmesim);
+    border-radius: 10px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 
+        0 0 30px var(--rosa),
+        inset 0 0 20px rgba(209, 0, 71, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.caixa-sangue::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, var(--rosa), transparent, var(--carmesim));
+    z-index: -1;
+    animation: brilhoBorda 4s infinite linear;
+}
+
+.mensagem-digitando {
+    color: var(--branco);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    min-height: 200px;
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 5px rgba(255, 42, 109, 0.7);
+}
+
+/* Controle de som */
+#controle-som {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(26, 26, 26, 0.7);
+    border: 2px solid var(--rosa);
+    color: var(--branco);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(255, 42, 109, 0.5);
+}
+
+.som-ativo {
+    background: rgba(209, 0, 71, 0.7) !important;
+}

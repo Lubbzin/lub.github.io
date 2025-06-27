@@ -1,0 +1,53 @@
+@media (max-width: 900px) {
+    .timeline-sangrenta::before {
+        left: 30px;
+    }
+    
+    .momento {
+        width: calc(100% - 80px);
+        margin-left: 40px;
+    }
+    
+    .momento:nth-child(even) {
+        left: 0;
+    }
+    
+    .momento:nth-child(odd)::after,
+    .momento:nth-child(even)::after {
+        left: -50px;
+        right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .titulo-sangrento {
+        font-size: 3rem;
+    }
+    
+    .subtitulo {
+        font-size: 1.2rem;
+    }
+    
+    .titulo-cortado {
+        font-size: 2.5rem;
+    }
+    
+    .galeria-gore {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .caixa-sangue {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-sangrento {
+        font-size: 2.2rem;
+    }
+    
+    .botao-destruido {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

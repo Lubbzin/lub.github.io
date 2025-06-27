@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pra Birutinha! </title>
+    
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animacoes.css">
+    <link rel="stylesheet" href="styles/responsivo.css">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Áudio de fundo -->
+    <audio id="musica-fundo" loop>
+        <source src="assets/audio/pensando.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Controle de som -->
+    <button id="controle-som" class="som-ativo">🔊</button>
+
+    <!-- Marcas de cigarro -->
+    <div class="cigarro-marca cigarro-1">⸻</div>
+    <div class="cigarro-marca cigarro-2">⸻</div>
+    <div class="cigarro-marca cigarro-3">⸻</div>
+    
+    <!-- Efeito de sangue -->
+    <div class="sangue-efeito"></div>
+
+    <!-- Seções -->
+    <section id="capa" class="tela-cheia">
+        <div class="gatinho-pata">🐾</div>
+        <h1 class="titulo-sangrento animate__animated animate__pulse">Para <span class="destaque">Birutinha</span></h1>
+        <p class="subtitulo">cuticuticuticuti</p>
+        <button id="comecar-jornada" class="botao-destruido">Stalkear Meus Pensamentos</button>
+    </section>
+
+    <section id="nossa-historia" class="oculto">
+        <h2 class="titulo-cortado">Nossa <span>História</span></h2>
+        <div class="timeline-sangrenta">
+            <!-- Momentos serão inseridos via JS -->
+        </div>
+    </section>
+
+    <section id="galeria" class="oculto">
+        <h2 class="titulo-cortado">Momentos <span>Especiais</span></h2>
+        <div class="galeria-gore">
+            <!-- Fotos serão inseridas via JS -->
+        </div>
+    </section>
+
+    <section id="surpresa" class="oculto">
+        <h2 class="titulo-cortado">Para Minha <span>Birutinha</span></h2>
+        <div class="caixa-sangue">
+            <p class="mensagem-digitando">faço isso depois</p>
+            <button id="botao-confetti" class="botao-destruido">Abrir Surpresa</button>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js@0.0.18/dist/index.min.js"></script>
+    <script src="scripts/musica.js"></script>
+    <script src="scripts/efeitos.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
